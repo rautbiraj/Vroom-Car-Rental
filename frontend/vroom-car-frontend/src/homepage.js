@@ -15,6 +15,8 @@ function HomePage() {
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><Link to="/Profile">User Profile</Link></li> {/* Link to UserProfile */}
+                <li><Link to={"/cars"}>Cars</Link></li>
+                <li><Link to={"Contactus"}>Contact Us</Link></li>
 
                 <li className='si'> 
                 <Link to={"/login"}>Login</Link>                
@@ -38,7 +40,8 @@ function HomePage() {
                 <input type="date" id="time" className="date" />
                 </div>
 
-                <button className='confirm-button'>Confirm</button>
+                <button className='confirm-button'>
+                  <Link to={"/cars"} className='log1'>Confirm</Link></button>
 
                 <div className='date-wrapper2'>
                 <label htmmlFor="time2">Drop date:</label>
@@ -50,7 +53,7 @@ function HomePage() {
 
         <footer>
           <div className="container">
-            <p>&copy; 2024 Company Name. All rights reserved.</p>
+            <p>&copy; 2024(VroomCar). All rights reserved.</p>
           </div>
         </footer>
         </div>
