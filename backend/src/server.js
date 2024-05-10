@@ -1,4 +1,6 @@
 // server.js
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 const express = require('express');
 const corsMiddleware = require('./middleware/cors');
 const authRoutes = require('./routes/authRoutes');
