@@ -1,90 +1,103 @@
-/* General Reset */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
-.car-body {
+/* Body styles */
+body {
   font-family: Arial, sans-serif;
   background-image: url(audi.jpg);
   background-position: fixed;
   background-size: cover;
 }
 
-/* Footer Styles */
+/* Footer styles */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   padding: 5px 0;
   text-align: center;
 }
 
-.fot {
+.footer-text {
   font-size: 14px;
 }
 
-/* Car Container Styles */
-.car-container {
-  margin: 20px auto;
-  padding: 30px;
-  width: 80vw;
-  height: 55vh;
-  text-align: center;
-  background-color: #C0C0C0;
-  opacity: 85%;
-  border: #000000 2px solid;
-  border-radius: 30px;  
-}
+/* Cars.css */
 
-.car-container:hover {
-  opacity:100%;
-}
-
-.car-heading {
-  font-size: 24px;
-  color: black;
-  margin-top: 11px;
-  margin-bottom: 18px;
-}
-
-.car-options {
+.app {
   display: flex;
-  justify-content: space-between;
-  text-align: left;
+  flex-direction: column;
+  align-items: center;
 }
 
-.car-option button {
+.booking-options {
+  margin-top: 20px;
+}
+
+.booking-options button {
+  margin-right: 10px;
   padding: 10px 20px;
-  background-color: rgb(231, 231, 231);
-  border-radius: 11px;
-  color: black;
+  font-size: 16px;
   cursor: pointer;
 }
 
-.car-option button:hover {
-  background-color: #deffb3;
+.car-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  background-color: #292727cb;
+  color: rgb(255, 255, 255);
+  width: 65%;
+  height: 58vh;
 }
 
-/* Availability Info Styles */
-.availability-info {
-  margin-top: auto;
+.car-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: rgb(214, 214, 214);
+  margin: 25px;
+}
+.car{
+  margin: 26px;
 }
 
-.availability-info p {
-  margin: 12px 0;
+.car {
+  text-align: center;
 }
 
-.cn {
-  font-size: 12px;
-  font-weight: 400;
+.car img {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
 }
 
-.cn:hover {
-  font-size: 14px;
+.car p {
+  margin-bottom: 10px;
+}
+
+.car button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.car button:hover {
+  background-color: #0056b3;
+}
+
+
+p.carw{
+  font-size: 20px;
+  font-weight: 800;
 }
