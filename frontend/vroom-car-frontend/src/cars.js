@@ -55,12 +55,12 @@ function Cars() {
           <div className="car-details">
             <h2>Normal Car Details</h2>
             <div className="car-info">
-              <div className="car">
+              <div class="car">
                 <img src="normal1.jpg" alt="Normal 1" />
                 <p className='carw'>Name:Creata</p>
                 <button>Book</button>
               </div>
-              <div className="car">
+              <div class="car">
                 <img src="normal2.jpg" alt="Normal 2" />
                 <p className='carw'>Name:Seltos</p>
                 <button>Book</button>
@@ -81,7 +81,7 @@ function Cars() {
           <nav>
           <h1>Vroom Car Rental Services</h1>
             <ul>
-              <li className='home'><a href="#HomePage"> Home</a></li>
+              <li><Link to={"/"}> Home</Link></li>
               <li><a href="#services">Services</a></li>
               <li><Link to={"/cars"}>Cars</Link></li>
               <li><Link to={"/contactus"}>Contact Us</Link></li>

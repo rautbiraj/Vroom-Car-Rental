@@ -53,6 +53,7 @@ footer {
   border: 3px solid #000000;
   border-radius: 5px;
   background-color: #292727cb;
+  color: rgb(255, 255, 255);
 }
 
 .car-info {
@@ -60,6 +61,10 @@ footer {
   justify-content: space-around;
   margin-top: 20px;
   color: rgb(214, 214, 214);
+  margin: 25px;
+}
+.car{
+  margin: 26px;
 }
 
 .car {
@@ -89,9 +94,6 @@ footer {
   background-color: #0056b3;
 }
 
-.car{
-  margin: 35px;
-}
 
 p.carw{
   font-size: 20px;
