@@ -54,6 +54,8 @@ footer {
   border-radius: 5px;
   background-color: #292727cb;
   color: rgb(255, 255, 255);
+  width: 65%;
+  height: 58vh;
 }
 
 .car-info {

@@ -17,7 +17,6 @@ return (
       </Routes>
     </BrowserRouter>
   );
-
   
  }
 export default App;
