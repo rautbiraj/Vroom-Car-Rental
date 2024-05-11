@@ -1,0 +1,103 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(audi.jpg);
+  background-position: fixed;
+  background-size: cover;
+}
+
+/* Footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+/* Cars.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-options {
+  margin-top: 20px;
+}
+
+.booking-options button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.car-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  background-color: #292727cb;
+  color: rgb(255, 255, 255);
+  width: 65%;
+  height: 58vh;
+}
+
+.car-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  color: rgb(214, 214, 214);
+  margin: 25px;
+}
+.car{
+  margin: 26px;
+}
+
+.car {
+  text-align: center;
+}
+
+.car img {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.car p {
+  margin-bottom: 10px;
+}
+
+.car button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.car button:hover {
+  background-color: #0056b3;
+}
+
+
+p.carw{
+  font-size: 20px;
+  font-weight: 800;
+}
