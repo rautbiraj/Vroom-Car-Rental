@@ -26,8 +26,8 @@ function Signup() {
             });
             
             if (response.ok) {
-                // Redirect to login page on successful signup
-                navigate('/login');
+                // Redirect to UserProfile component on successful signup
+                navigate('/profile', { state: { name, email } });
             } else {
                 const data = await response.json();
                 setError(data.message || 'An error occurred during signup.');

@@ -5,6 +5,7 @@ body {
   padding: 0; /* Reset default padding */
 }
 
+
 header {
   background-color: #000000; 
   color: rgb(255, 255, 255);
@@ -13,7 +14,16 @@ header {
   background-image: url(nav.jpg);
   background-size: cover; /* Adjust background-size to cover the entire header */
 }
-
+.containerbox {
+  width: 100%; /* Make the container-box full-width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0; /* Adjust padding for better spacing */
+  text-align: center; 
+  background-image: url(nav.jpg);
+  background-size: cover; /* Adjust background-size to cover the entire header */
+}
 
 /* Navigation styles */
 nav ul {
@@ -38,9 +48,10 @@ nav ul li a {
 
 .profile-container {
   display: flex;
+  width: 100%;
   justify-content: space-between; /* Arrange profile box and bookings box horizontally */
   margin: 5% auto; /* Adjust margin for top and bottom, and center horizontally */
-  max-width: 1200px; /* Limit the maximum width */
+  margin-left: 20%;
 }
 
 .profile-box {
@@ -123,6 +134,18 @@ nav ul li a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.edit-btn,.save-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 15px;
+  background-color: #007bff;
+  margin-right: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 /* .profile-btn, */
 .signout-btn{
   display: flex;
@@ -137,7 +160,7 @@ nav ul li a {
 }
 
 .dashboard-btn:hover,
-.profile-btn:hover,
+.edit-btn:hover,
 .signout-btn:hover {
   background-color: #0056b3;
 }

@@ -62,7 +62,7 @@ function Login() {
                 <button type="submit" className="btn">Login</button>
             </form>
             <p>
-                <Link to="/forgot-password">Forgot Password?</Link>
+                <Link to="/forgotpassword">Forgot Password?</Link>
             </p>
             <p>Don't have an account? <a href='/signup'>Sign up</a></p>
         </div>

@@ -1,0 +1,68 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+/* body{
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-size: cover;
+} */
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the start */
+  max-width: 800px;
+  margin: 50px auto; /* Center the container */
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  height: 200%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1{
+  margin-left: 20%;
+  color:black
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #0056b3;
+}
+
+/* Content styles */
+.content {
+  flex: 1; /* Take remaining space */
+  height: 100px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
