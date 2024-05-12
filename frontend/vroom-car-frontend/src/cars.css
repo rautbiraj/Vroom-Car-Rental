@@ -68,14 +68,17 @@ footer {
 .car{
   margin: 26px;
 }
+.carImage{
+  border-radius:40px;
+}
 
 .car {
   text-align: center;
 }
 
 .car img {
-  width: 200px;
-  height: 150px;
+  width: 400px;
+  height: 250px;
   margin-bottom: 10px;
 }
 

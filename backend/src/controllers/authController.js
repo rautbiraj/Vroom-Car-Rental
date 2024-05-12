@@ -1,6 +1,7 @@
 // authController.js
 const bcrypt = require('bcrypt');
 const pool = require('../config/db');
+
 // Function to handle user signup
 const signup = async (req, res) => {
   const { name, email, password } = req.body;
@@ -60,4 +61,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { login,signup };
+module.exports = { login, signup };

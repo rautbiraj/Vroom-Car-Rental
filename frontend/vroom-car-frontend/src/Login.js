@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
+
+import './homepage';
 import './Login.css';
+import { setLoggedIn, setUserInfo } from './authSlice';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const dispatch = useDispatch()
     const handleLogin = async (e) => {
         e.preventDefault();
         
@@ -22,9 +27,13 @@ function Login() {
             });
             
             if (response.ok) {
-                console.log(response,'login response')
+                const data = await response.json();
+
+                console.log(data.user,'login response')
+                dispatch(setUserInfo(data.user))
+                dispatch(setLoggedIn(true))
                 // Redirect to dashboard or desired page on successful login
-                navigate('/HomePage');
+                navigate('/');
             } else {
                 const data = await response.json();
                 setError(data.message || 'An error occurred during login.');

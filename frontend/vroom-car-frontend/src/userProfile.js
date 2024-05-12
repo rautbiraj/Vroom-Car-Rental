@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
 import './userProfile.css'; // Import CSS file for styling
+import { useDispatch, useSelector } from 'react-redux';
+import { setLoggedIn, setUserInfo } from './authSlice';
+import HistoryCard from './HistoryCard';
 
 
 const UserProfile = () => {
@@ -9,7 +12,9 @@ const UserProfile = () => {
   const [userEmail, setUserEmail] = useState('john.doe@example.com');
   const [bookingInput, setBookingInput] = useState(''); // State for booking input
   const [bookings, setBookings] = useState([]); // State to store bookings
-
+  const user = useSelector(state=>state.auth.userInfo)
+  const isLoggedIn = useSelector(state=>state.auth.userToken)
+  const dispatch = useDispatch()
   const handleProfilePicChange = (e) => {
     const file = e.target.files[0];
     // You can handle the logic for updating profile picture here
@@ -26,22 +31,57 @@ const UserProfile = () => {
       setBookingInput('');
     }
   };
+  
 
+  const getBooking= async ()=>{
+    try {
+    const response=  await fetch(`http://localhost:3000/api/booking-history/user/${user.id}`)
+    
+    const data = await response.json();
+  console.log(data,'booking data')
+    setBookings(data);
+    } catch (error) {
+alert(error)
+    }
+
+  }
+  useEffect(() => {
+    // Fetch user's bookings when component mounts
+    if (isLoggedIn) {
+      getBooking()
+    }else{
+      alert('You need to login first')
+    }
+ 
+  }, [isLoggedIn, user?.id]); // Fetch bookings whenever isLoggedIn or user.id changes
+
+console.log(bookings,'bookings')
+
+const handleLogout=()=>{
+ dispatch(setUserInfo(null));
+ dispatch(setLoggedIn(null))
+
+}
   return (
     <div>
       <header>
         <div className="containerbox">
-          <nav>
+        <nav style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
             <ul>
               <li className='home'><a href="#HomePage"> Home</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
               <li><Link to="/profile">User Profile</Link></li>
-              <li className='si'> 
-                <Link to={"/login"}>Login</Link>                
-              </li>
+         
             </ul>
+            <div style={{display:'flex',flexDirection:'row',width:'20%'}}> 
+            {isLoggedIn?<button onClick={()=>handleLogout()} className='btn'><Link  to={"/"}>Logout</Link></button> : <button className='btn'><Link to={"/login"}>Login</Link></button> }             
+        <div style={{minWidth:'30px'}}/>
+            {/* {isLoggedIn&&<button className='btn'><Link to={"/profile"}>Profile</Link></button> }              */}
+
+                </div>
           </nav>
+          
         </div>
       </header>
       <div className="profile-container">
@@ -60,8 +100,8 @@ const UserProfile = () => {
             {/* <button className="change-pic-btn">Change Profile Picture</button> */}
           </div>
           <div className="user-details">
-            <p><strong>Name:</strong> {userName}</p>
-            <p><strong>Email:</strong> {userEmail}</p>
+            <p><strong>Name:</strong> {user.name}</p>
+            <p><strong>Email:</strong> {user.email}</p>
           </div>
           <div className="profile-actions">
           <div><Link to="/" className="dashboard-btn">Go to Dashboard</Link></div>
@@ -71,19 +111,20 @@ const UserProfile = () => {
         </div>
         <div className="bookings-box">
           <h3>My Bookings</h3>
-          <h4>No Bookings Yet</h4>
-          {/* <ul>
-            {bookings.map((booking, index) => (
-              <li key={index}>{booking}</li>
+         
+      <ul>
+            {bookings?.map((booking, index) => (
+<HistoryCard booking={booking} key={booking.id}/>              
+            
             ))}
-          </ul>
-          <input
+          </ul> 
+          {/* <input
             type="text"
             value={bookingInput}
             onChange={handleBookingInputChange}
             placeholder="Enter booking details"
           />
-          <button onClick={handleAddBooking}>Add Booking</button> */}
+          <button onClick={handleAddBooking}>Add Booking</button>  */}
         </div>
       </div>
     </div>

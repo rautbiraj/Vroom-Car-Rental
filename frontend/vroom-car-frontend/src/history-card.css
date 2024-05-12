@@ -1,0 +1,20 @@
+.history-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .history-card h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .history-card p {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  
+  /* You can add more styles as needed */
+  
