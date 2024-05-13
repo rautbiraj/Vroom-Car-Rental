@@ -9,13 +9,13 @@ function HomePage() {
         <header>
           <div className="containerbox">
             <nav>
-            <h1>Vroom Car Rental Services</h1>
+            <h1 className='v1'>Vroom Car Rental Services</h1>
               <ul>
                 <li className='home'><a href="#HomePage"> Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><Link to={"/cars"}>Cars</Link></li>
                 <li><Link to={"/contact"}>Contact Us</Link></li>
-                <li className='si'> 
+                <li className='li'> 
                 <Link to={"/login"}>Login</Link>                
                   </li>
                   </ul>
@@ -25,8 +25,7 @@ function HomePage() {
 
         <div className='container2'>
         <div className='fontt'>
-          <p>Pick Your Date: </p>
-
+          <p className='carss'>Looking for a car? </p>
         </div>
         </div>
 
@@ -35,6 +34,7 @@ function HomePage() {
             <div className="date-wrapper">
                 <label htmlFor="time">Pick up date:</label>
                 <input type="date" id="time" className="date" />
+                <input type="location" id="loca" className='location' />
                 </div>
 
                 <button className='confirm-button'>
@@ -43,6 +43,8 @@ function HomePage() {
                 <div className='date-wrapper2'>
                 <label htmmlFor="time2">Drop date:</label>
                 <input type="date" id="time2" className="date2" />
+                <input type="location" id="loca2" className='location' />
+                </div>
                 </div>
               </div>
             </div>
@@ -53,10 +55,7 @@ function HomePage() {
             <p>&copy; 2024(VroomCar). All rights reserved.</p>
           </div>
         </footer>
-        </div>
-        </div>
-        
-        
+        </div> 
   );
 }
 

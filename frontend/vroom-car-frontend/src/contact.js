@@ -18,25 +18,24 @@ const ContactPage = () => {
     }
 
     return (
-        <div className='contactus'>
-        <div className="full-page">
-          <header>
-            <div className="containerbox">
-              <nav>
-              <h1>Vroom Car Rental Services</h1>
-                <ul>
-                <li><Link to={"/"}> Home</Link></li>
-              <li><a href="#services">Services</a></li>
-              <li><Link to={"/cars"}>Cars</Link></li>
-              <li><Link to={"/contact"}>Contact Us</Link></li>
-
-                  <li className='si'> 
-                  <Link to={"/login"}>Login</Link>                
-                    </li>
-                    </ul>
-              </nav>
-            </div>
-          </header>
+      <div className='contactus'>
+      <div className="full-page">
+        <header>
+          <div className="containerbox">
+            <nav>
+            <h1 className='v1'>Vroom Car Rental Services</h1>
+              <ul>
+                <li><Link to={"/"}> Home </Link></li>
+                <li><a href="#services">Services</a></li>
+                <li><Link to={"/cars"}>Cars</Link></li>
+                <li><Link to={"/contact"}>Contact Us</Link></li>
+                <li className='li'> 
+                <Link to={"/login"}>Login</Link>                
+                  </li>
+                  </ul>
+            </nav>
+          </div>
+        </header>
 
         <div className="container">
             <h1>Contact Us</h1>
