@@ -21,11 +21,19 @@ function Cars() {
               <div class="car">
                 <img src="suv1.jpg" alt="SUV 1" />
                 <p class='carw'>Name:Scorpio</p>
+                <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
                 <button>Book</button>
               </div>
               <div class="car">
                 <img src="suv2.jpg" alt="SUV 2" />
                 <p class='carw'>Name:Range Rover</p>
+                <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
                 <button>Book</button>
               </div>
             </div>
@@ -39,12 +47,20 @@ function Cars() {
               <div class="car">
                 <img src="bmw.png" alt="BMW" />
                 <p className='carw'>Name:BMW</p>
+                <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
 
                 <button>Book</button>
               </div>
               <div class="car">
                 <img src="luxury2.jpg" alt="JAG" />
                       <p class='carw'>Name:Jaguwar</p>
+                      <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
                 <button>Book</button>
               </div>
             </div>
@@ -58,11 +74,19 @@ function Cars() {
               <div class="car">
                 <img src="normal1.jpg" alt="Normal 1" />
                 <p className='carw'>Name:Creata</p>
+                <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
                 <button>Book</button>
               </div>
               <div class="car">
                 <img src="normal2.jpg" alt="Normal 2" />
                 <p className='carw'>Name:Seltos</p>
+                <p class='carw'>Brand: </p>
+                <p class='carw'>Seat count: </p>
+                <p class='carw'>Type: </p>
+                <p class='carw'>Is Booked: </p>
                 <button>Book</button>
               </div>
             </div>
@@ -84,7 +108,7 @@ function Cars() {
               <li><Link to={"/"}> Home</Link></li>
               <li><a href="#services">Services</a></li>
               <li><Link to={"/cars"}>Cars</Link></li>
-              <li><Link to={"/contactus"}>Contact Us</Link></li>
+              <li><Link to={"/contact"}>Contact Us</Link></li>
 
               <li className='si'> 
               <Link to={"/login"}>Login</Link>                

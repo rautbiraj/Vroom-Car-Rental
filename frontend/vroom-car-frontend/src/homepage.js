@@ -14,8 +14,7 @@ function HomePage() {
                 <li className='home'><a href="#HomePage"> Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><Link to={"/cars"}>Cars</Link></li>
-                <li><Link to={"Contactus"}>Contact Us</Link></li>
-
+                <li><Link to={"/contact"}>Contact Us</Link></li>
                 <li className='si'> 
                 <Link to={"/login"}>Login</Link>                
                   </li>
@@ -50,7 +49,7 @@ function HomePage() {
   
 
         <footer>
-          <div className="container">
+          <div className="containerss">
             <p>&copy; 2024(VroomCar). All rights reserved.</p>
           </div>
         </footer>
