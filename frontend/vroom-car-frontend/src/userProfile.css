@@ -1,6 +1,6 @@
 body {
-  /*.bookings-box: url('bgh.jpg') fixed; /* Background image with fixed positioning */
-  background-size: cover; /* Cover the entire page */
+  background-image: url(audi.jpg);
+   background-size: cover;/* Cover the entire page */ 
   margin: 0; /* Reset default margin */
   padding: 0; /* Reset default padding */
 }
@@ -48,17 +48,19 @@ nav ul li a {
 
 .profile-container {
   display: flex;
-  width: 100%;
+  width: 23%;
+  color: white;
+  background-color: black;
   justify-content: space-between; /* Arrange profile box and bookings box horizontally */
-  margin: 5% auto; /* Adjust margin for top and bottom, and center horizontally */
-  margin-left: 20%;
+  margin: 1% auto; /* Adjust margin for top and bottom, and center horizontally */
+  margin-left: 18%;
 }
 
 .profile-box {
   flex: 0 0 25%; /* Set the width of profile box */
   border: 2px solid #ccc;
   padding: 20px;
-  margin-right: 20px; /* Add space between profile and bookings */
+  margin-right: 2px; /* Add space between profile and bookings */
   transition: opacity 0.3s; /* Add transition for smooth opacity change */
 }
 
@@ -66,8 +68,18 @@ nav ul li a {
   opacity: 0.8; /* Change opacity on hover */
 }
 
+.booking-container{
+  display: flex;
+  width: 65%;
+  color: white;
+  background-color: black;
+  justify-content: space-between; /* Arrange profile box and bookings box horizontally */
+  margin: 2% auto; /* Adjust margin for top and bottom, and center horizontally */
+  margin-left: 18%;
+}
+
 .bookings-box {
-  flex: 0 0 45%; /* Set the width of bookings box */
+  flex: 0 0 100%; /* Set the width of bookings box */
   border: 2px solid #ccc;
   padding: 20px;
   margin-right: 50%;

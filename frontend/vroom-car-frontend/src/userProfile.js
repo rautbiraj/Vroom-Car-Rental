@@ -30,7 +30,7 @@ const UserProfile = ({ name: initialName, email: initialEmail }) => {
   };
 
   return (
-    <div>
+    <>
       <header>
         <div className="containerbox">
           <nav>
@@ -44,57 +44,62 @@ const UserProfile = ({ name: initialName, email: initialEmail }) => {
         </div>
       </header>
       <div className="profile-container">
-        <div className="profile-box">
-          <div className="profile-header">
-            <img src={'https://c8.alamy.com/comp/T8P43K/vector-logo-for-car-rental-and-sales-T8P43K.jpg'} alt="Vroom Car Rental Service" className="company-logo" />
-            <h2>Vroom Car Rental Service</h2>
-          </div>
-          <div className="profile-picture">
-            {profilePic ? (
-              <img src={URL.createObjectURL(profilePic)} alt="Profile" className="user-avatar" />
-            ) : (
-              <div className="default-avatar">No Image</div>
-            )}
-            <input type="file" accept="image/*" onChange={handleProfilePicChange} />
-          </div>
-          <div className="user-details">
-            <p>
-              <strong>Name:</strong>{' '}
-              {isEditing ? (
-                <input type="text" value={name} onChange={handleNameChange} />
+        <div className="profile-box-container">
+          <div className="profile-box">
+            <div className="profile-header">
+              <img src={'https://c8.alamy.com/comp/T8P43K/vector-logo-for-car-rental-and-sales-T8P43K.jpg'} alt="Vroom Car Rental Service" className="company-logo" />
+              <h2>Vroom Car Rental Service</h2>
+            </div>
+            <div className="profile-picture">
+              {profilePic ? (
+                <img src={URL.createObjectURL(profilePic)} alt="Profile" className="user-avatar" />
               ) : (
-                <span>{name}</span>
+                <div className="default-avatar">No Image</div>
               )}
-            </p>
-            <p>
-              <strong>Email:</strong>{' '}
+              <input type="file" accept="image/*" onChange={handleProfilePicChange} />
+            </div>
+            <div className="user-details">
+              <p>
+                <strong>Name:</strong>{' '}
+                {isEditing ? (
+                  <input type="text" value={name} onChange={handleNameChange} />
+                ) : (
+                  <span>{name}</span>
+                )}
+              </p>
+              <p>
+                <strong>Email:</strong>{' '}
+                {isEditing ? (
+                  <input type="email" value={email} onChange={handleEmailChange} />
+                ) : (
+                  <span>{email}</span>
+                )}
+              </p>
+            </div>
+            <div className="profile-actions">
               {isEditing ? (
-                <input type="email" value={email} onChange={handleEmailChange} />
+                <div>
+                  <button className="save-btn" onClick={handleSave}>Save</button>
+                </div>
               ) : (
-                <span>{email}</span>
+                <div>
+                  <button className="edit-btn" onClick={handleEdit}>Edit</button>
+                </div>
               )}
-            </p>
-          </div>
-          <div className="profile-actions">
-            {isEditing ? (
-              <div>
-                <button className="save-btn" onClick={handleSave}>Save</button>
-              </div>
-            ) : (
-              <div>
-                <button className="edit-btn" onClick={handleEdit}>Edit</button>
-              </div>
-            )}
-            {/* <div><Link to="/" className="dashboard-btn">Go to Dashboard</Link></div> */}
-            <div><button className="signout-btn">Sign Out</button></div>
+              {/* <div><Link to="/" className="dashboard-btn">Go to Dashboard</Link></div> */}
+              <div><button className="signout-btn">Sign Out</button></div>
+            </div>
           </div>
         </div>
-        <div className="bookings-box">
-          <h3>My Bookings</h3>
-          <h4>No Bookings Yet</h4>
+        
         </div>
+        <div className="booking-container">
+          <div className="bookings-box">
+            <h3>My Bookings</h3>
+            <h4>No Bookings Yet</h4>
+          </div>
       </div>
-    </div>
+    </>
   );
 };
 
