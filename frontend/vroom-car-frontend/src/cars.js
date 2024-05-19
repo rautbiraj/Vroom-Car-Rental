@@ -6,7 +6,7 @@ import './cars.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoggedIn, setUserInfo } from './authSlice';
 
-function Cars() {
+function  Cars() {
   const user = useSelector(state=>state.auth.userInfo)
   const isLoggedIn = useSelector(state=>state.auth.userToken)
   const dispatch = useDispatch()
@@ -14,6 +14,8 @@ function Cars() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [bookingDate, setBookingDate] = useState('');
   const [dropDate, setDropDate] = useState('');
+  const [pickupLocation, setPickupLocation] = useState('');
+  const [dropLocation, setDropLocation] = useState('');
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
@@ -25,8 +27,12 @@ function Cars() {
     const searchParams = new URLSearchParams(location.search);
     const bookingDateParam = searchParams.get('bookingDate');
     const dropDateParam = searchParams.get('dropDate');
+    const pickupLocationParam = searchParams.get('pickupLocation');
+    const dropLocationParam = searchParams.get('dropLocation');
     setBookingDate(bookingDateParam || '');
     setDropDate(dropDateParam || '');
+    setPickupLocation(pickupLocationParam || '');
+    setDropLocation(dropLocationParam || '');
   }, [location.search]);
 console.log(bookingDate,user,isLoggedIn,'booking date')
 
@@ -39,7 +45,9 @@ console.log(bookingDate,user,isLoggedIn,'booking date')
         },
         body: JSON.stringify({
           bookingDate,
+          pickupLocation,
           dropDate,
+          dropLocation,
           carId,
           userId:user?.id
         }),
@@ -128,30 +136,6 @@ console.log(bookingDate,user,isLoggedIn,'booking date')
   return (
     <div className='carpage'>
     <div className="full-page">
-      <header>
-        <div className="containerbox">
-          <nav style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-         <div  style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-          <h1>Vroom Car Rental Services</h1>
-            <ul>
-              <li><Link to={"/"}> Home</Link></li>
-              <li><Link to={"/cars"}>Cars</Link></li>
-              <li><a href="/contact">Contact Us</a></li>
-              <li><Link to={"/profile"}>Profile</Link></li>
-
-           
-                </ul>
-                </div>
-                <div style={{display:'flex',flexDirection:'row',width:'20%'}}> 
-                {isLoggedIn?<button onClick={()=>handleLogout()} className='btn'><Link  to={"/"}>Logout</Link></button> : <button className='btn'><Link to={"/login"}>Login</Link></button> }             
-        <div style={{minWidth:'30px'}}/>
-            {/* {isLoggedIn&&<button className='btn'><Link to={"/profile"}>Profile</Link></button> }              */}
-
-                </div>
-
-          </nav>
-        </div>
-      </header>
 
     <div className="app">
       <div className="booking-options">

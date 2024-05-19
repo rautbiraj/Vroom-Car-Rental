@@ -18,22 +18,6 @@ const Contactus = () => {
   return (
     <div className='car-contact'>
       <div className="full-page">
-        <header>
-          <div className="conb">
-            <nav>
-              <h1>Vroom Car Rental Services</h1>
-              <ul>
-                <li className='home'><Link to={"/"}> Home</Link></li>
-                <li><a href="#services">Services</a></li>
-                <li><Link to={"/cars"}>Cars</Link></li>
-                <li><Link to={"/contact"}>Contact Us</Link></li>
-                <li className='si'> 
-                  <Link to={"/login"}>Login</Link>                
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
 
         <div className="contact-form-container">
           <h2>Contact Us</h2>

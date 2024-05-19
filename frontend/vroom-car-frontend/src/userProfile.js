@@ -64,26 +64,7 @@ const handleLogout=()=>{
 }
   return (
     <div>
-      <header>
-        <div className="containerbox">
-        <nav style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-            <ul>
-              <li className='home'><a href="#HomePage"> Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-              <li><Link to="/profile">User Profile</Link></li>
-         
-            </ul>
-            <div style={{display:'flex',flexDirection:'row',width:'20%'}}> 
-            {isLoggedIn?<button onClick={()=>handleLogout()} className='btn'><Link  to={"/"}>Logout</Link></button> : <button className='btn'><Link to={"/login"}>Login</Link></button> }             
-        <div style={{minWidth:'30px'}}/>
-            {/* {isLoggedIn&&<button className='btn'><Link to={"/profile"}>Profile</Link></button> }              */}
-
-                </div>
-          </nav>
-          
-        </div>
-      </header>
+ 
       <div className="profile-container">
         <div className="profile-box">
           <div className="profile-header">

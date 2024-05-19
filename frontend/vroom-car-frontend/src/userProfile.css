@@ -46,25 +46,27 @@ nav ul li a {
 .profile-box {
   flex: 0 0 25%; /* Set the width of profile box */
   border: 2px solid #ccc;
+  background-color: #fff;
   padding: 20px;
   margin-right: 20px; /* Add space between profile and bookings */
-  transition: opacity 0.3s; /* Add transition for smooth opacity change */
+ /* Add transition for smooth opacity change */
 }
 
 .profile-box:hover {
-  opacity: 0.8; /* Change opacity on hover */
+  /* opacity: 0.8; Change opacity on hover */
 }
 
 .bookings-box {
   flex: 0 0 45%; /* Set the width of bookings box */
   border: 2px solid #ccc;
+  background-color: #fff;
   padding: 20px;
   margin-right: 50%;
-  transition: opacity 0.3s; /* Add transition for smooth opacity change */
+  /* transition: opacity 0.3s; */
 }
 
 .bookings-box:hover {
-  opacity: 0.8; /* Change opacity on hover */
+  /* opacity: 1; Change opacity on hover */
 }
 
 /* Additional Styles */
