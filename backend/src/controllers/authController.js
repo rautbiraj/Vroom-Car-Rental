@@ -4,7 +4,7 @@ const pool = require('../config/db');
 
 // Function to handle user signup
 const signup = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password ,roleId} = req.body;
 
   try {
     // Check if the email is already registered
@@ -20,8 +20,8 @@ const signup = async (req, res) => {
 
     // Insert new user into the database with role_id 2 for regular users
     const query = 'INSERT INTO "user" (name, email, password, role_id) VALUES ($1, $2, $3, $4)';
-    console.log(query,[name, email, hashedPassword, 2])
-    await pool.query(query, [name, email, hashedPassword, 2]); // Assuming role_id 2 is for regular users
+    console.log(query,[name, email, hashedPassword, roleId])
+    await pool.query(query, [name, email, hashedPassword, roleId]); // Assuming role_id 2 is for regular users
 
     return res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {

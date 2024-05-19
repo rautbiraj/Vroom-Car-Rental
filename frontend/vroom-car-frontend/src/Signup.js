@@ -7,7 +7,7 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [roleId, setRoleId] = useState(1);
+    const [roleId, setRoleId] = useState();
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -83,8 +83,8 @@ function Signup() {
                 <div className='input-group'>
                     <label htmlFor="role">Role:</label>
                     <select id="role" value={roleId} onChange={(e) => setRoleId(e.target.value)}>
-                        <option value={1}>Customer</option>
-                        <option value={2}>Business</option>
+                        <option value={2}>Customer</option>
+                        <option value={3}>Business</option>
                     </select>
                 </div>
                 <button type="submit" className="btn">Sign up</button>

@@ -10,6 +10,7 @@ const HistoryCard = ({ booking }) => {
       <p>Booking Date: {local}</p>
       <p>Drop Date: {booking.drop_date}</p>
       <p>Car Name: {booking.car_name}</p>
+      <p>Client Name:{booking.name}</p>
     </div>
   );
 };

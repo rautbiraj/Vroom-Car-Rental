@@ -20,7 +20,7 @@ import { setLoggedIn, setUserInfo } from './authSlice';
 const Navbar = () => {
   const dispatch = useDispatch()
   const isLoggedIn = useSelector(state=>state.auth.userToken)
-
+const role=useSelector(state=>state?.auth?.userInfo?.role_id)
   const handleLogout = () => {
 
     dispatch(setUserInfo(null));
@@ -38,7 +38,7 @@ const Navbar = () => {
               <li><Link to={"/cars"}>Cars</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to={"/profile"}>Profile</Link></li>
-
+{role==3&& <li><Link to={"/profile"}>Booking Histories</Link></li>}
            
                 </ul>
                 </div>

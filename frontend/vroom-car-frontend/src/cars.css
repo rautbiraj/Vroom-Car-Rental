@@ -104,3 +104,22 @@ p.carw{
   font-size: 20px;
   font-weight: 800;
 }
+
+
+
+.car-features{
+
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+flex-wrap: wrap;
+background: white;
+color: black;
+border-radius: 10px;
+}
+
+
+.car-features li{
+
+ width: 50%;
+  }
